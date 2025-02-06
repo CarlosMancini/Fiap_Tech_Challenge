@@ -13,14 +13,23 @@ spec:
         app: cadastro-produtor
     spec:
       containers:
-        - name: cadastro-produtor
-          image: mancinicadu/cadastro-produtor:1.0
-          ports:
-            - containerPort: 80
-          env:
-            - name: CONNECTION_STRING
-              value: "Server=sqlserver,1433;Database=CadastroProdutor;User Id=sa;Password=YourStrong!Passw0rd;"
-          resources:
-            limits:
-              memory: "512Mi"
-              cpu: "500m"
+      - name: cadastro-produtor
+        image: mancinicadu/cadastro-produtor:1.0 
+        ports:
+        - containerPort: 80
+        env:
+        - name: RABBITMQ_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: cadastro-produtor-config
+              key: RABBITMQ_HOST
+        - name: RABBITMQ_USER
+          valueFrom:
+            configMapKeyRef:
+              name: cadastro-produtor-config
+              key: RABBITMQ_USER
+        - name: RABBITMQ_PASS
+          valueFrom:
+            configMapKeyRef:
+              name: cadastro-produtor-config
+              key: RABBITMQ_PASS
