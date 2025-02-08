@@ -51,6 +51,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{A008F78F-3910-450E-980C-AB754DEE9201}"
 	ProjectSection(SolutionItems) = preProject
 		k8s\deployment\cadastro-consumidor-deployment.yaml = k8s\deployment\cadastro-consumidor-deployment.yaml
+		cadastro-deployment.yaml = cadastro-deployment.yaml
 		cadastro-produtor-deployment.yaml = cadastro-produtor-deployment.yaml
 		rabbitmq-deployment.yaml = rabbitmq-deployment.yaml
 		k8s\deployment\sqlserver-deployment.yaml = k8s\deployment\sqlserver-deployment.yaml
