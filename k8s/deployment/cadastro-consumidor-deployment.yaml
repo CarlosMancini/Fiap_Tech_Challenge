@@ -35,16 +35,3 @@ spec:
             requests:
               cpu: "250m"
               memory: "256Mi"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: cadastro-consumidor
-spec:
-  selector:
-    app: cadastro-consumidor
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-  type: ClusterIP
