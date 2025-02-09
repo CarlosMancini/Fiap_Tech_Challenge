@@ -50,6 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{FB6C00B3-083
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{A008F78F-3910-450E-980C-AB754DEE9201}"
 	ProjectSection(SolutionItems) = preProject
+		atualizacao-consumidor-deployment.yaml = atualizacao-consumidor-deployment.yaml
 		atualizacao-produtor-deployment.yaml = atualizacao-produtor-deployment.yaml
 		k8s\deployment\cadastro-consumidor-deployment.yaml = k8s\deployment\cadastro-consumidor-deployment.yaml
 		cadastro-produtor-deployment.yaml = cadastro-produtor-deployment.yaml
@@ -59,6 +60,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{20243353-AB3C-4EB0-B2D5-7DC075897435}"
 	ProjectSection(SolutionItems) = preProject
+		atualizacao-consumidor-service.yaml = atualizacao-consumidor-service.yaml
 		atualizacao-produtor-service.yaml = atualizacao-produtor-service.yaml
 		k8s\services\cadastro-consumidor-service.yaml = k8s\services\cadastro-consumidor-service.yaml
 		cadastro-produtor-service.yaml = cadastro-produtor-service.yaml

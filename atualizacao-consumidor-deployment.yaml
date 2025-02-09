@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atualizacao-consumidor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atualizacao-consumidor
+  template:
+    metadata:
+      labels:
+        app: atualizacao-consumidor
+    spec:
+      containers:
+        - name: atualizacao-consumidor
+          image: mancinicadu/atualizacao-consumidor:1.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: ConnectionStrings__ConnectionString
+              value: "Server=192.168.0.45\\MSSQLSERVER_FIAP;Database=tech_challenge_1;User Id=fiap_user;Password=1234;TrustServerCertificate=True;"
+            - name: MassTransit__NomeFila
+              value: "filaAtualizacao"
+            - name: MassTransit__Servidor
+              value: "rabbitmq"
+            - name: MassTransit__Usuario
+              value: "guest"
+            - name: MassTransit__Senha
+              value: "guest"
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: atualizacao-consumidor
+spec:
+  selector:
+    app: atualizacao-consumidor
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
