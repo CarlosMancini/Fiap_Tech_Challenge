@@ -57,8 +57,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", 
 		consulta-contato-deployment.yaml = consulta-contato-deployment.yaml
 		exclusao-consumidor-deployment.yaml = exclusao-consumidor-deployment.yaml
 		exclusao-produtor-deployment.yaml = exclusao-produtor-deployment.yaml
+		grafana-deployment.yaml = grafana-deployment.yaml
+		prometheus-deployment.yaml = prometheus-deployment.yaml
 		rabbitmq-deployment.yaml = rabbitmq-deployment.yaml
 		k8s\deployment\sqlserver-deployment.yaml = k8s\deployment\sqlserver-deployment.yaml
+		rabbitmq-exporter-deployment.yaml = rabbitmq-exporter-deployment.yaml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{20243353-AB3C-4EB0-B2D5-7DC075897435}"
@@ -70,12 +73,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{20
 		consulta-contato-service.yaml = consulta-contato-service.yaml
 		exclusao-consumidor-service.yaml = exclusao-consumidor-service.yaml
 		exclusao-produtor-service.yaml = exclusao-produtor-service.yaml
+		grafana-service.yaml = grafana-service.yaml
+		prometheus-service.yaml = prometheus-service.yaml
+		rabbitmq-exporter-service.yaml = rabbitmq-exporter-service.yaml
 		rabbitmq-service.yaml = rabbitmq-service.yaml
 		k8s\services\sqlserver-service.yaml = k8s\services\sqlserver-service.yaml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configMaps", "configMaps", "{6FE674F2-44E1-40A7-B1A9-A5BC9F97AD14}"
 	ProjectSection(SolutionItems) = preProject
+		prometheus-config.yaml = prometheus-config.yaml
 		rabbitmq-config.yaml = rabbitmq-config.yaml
 	EndProjectSection
 EndProject

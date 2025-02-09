@@ -27,16 +27,3 @@ spec:
             requests:
               cpu: "250m"
               memory: "256Mi"
----
-# apiVersion: v1
-# kind: Service
-# metadata:
-#   name: consulta-contato
-# spec:
-#   selector:
-#     app: consulta-contato
-#   ports:
-#     - protocol: TCP
-#       port: 8080
-#       targetPort: 80
-#   type: ClusterIP
