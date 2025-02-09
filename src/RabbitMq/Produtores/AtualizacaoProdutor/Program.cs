@@ -10,9 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var configuration = builder.Configuration;
-var servidor = configuration.GetSection("MassTransit")["Servidor"] ?? string.Empty;
-var usuario = configuration.GetSection("MassTransit")["Usuario"] ?? string.Empty;
-var senha = configuration.GetSection("MassTransit")["Senha"] ?? string.Empty;
+var servidor = Environment.GetEnvironmentVariable("RABBITMQ_HOST") ?? configuration.GetSection("MassTransit")["Servidor"] ?? string.Empty;
+var usuario = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? configuration.GetSection("MassTransit")["Usuario"] ?? string.Empty;
+var senha = Environment.GetEnvironmentVariable("RABBITMQ_PASS") ?? configuration.GetSection("MassTransit")["Senha"] ?? string.Empty;
 
 builder.Services.AddMassTransit((x =>
 {
