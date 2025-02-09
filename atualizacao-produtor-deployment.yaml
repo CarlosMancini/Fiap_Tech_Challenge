@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cadastro-produtor
+  name: atualizacao-produtor
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cadastro-produtor
+      app: atualizacao-produtor
   template:
     metadata:
       labels:
-        app: cadastro-produtor
+        app: atualizacao-produtor
     spec:
       containers:
-      - name: cadastro-produtor
-        image: mancinicadu/cadastro-produtor:1.0 
+      - name: atualizacao-produtor
+        image: mancinicadu/atualizacao-produtor:1.0 
         ports:
         - containerPort: 8080
         env:

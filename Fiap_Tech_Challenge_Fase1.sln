@@ -50,8 +50,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{FB6C00B3-083
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{A008F78F-3910-450E-980C-AB754DEE9201}"
 	ProjectSection(SolutionItems) = preProject
+		atualizacao-produtor-deployment.yaml = atualizacao-produtor-deployment.yaml
 		k8s\deployment\cadastro-consumidor-deployment.yaml = k8s\deployment\cadastro-consumidor-deployment.yaml
-		cadastro-deployment.yaml = cadastro-deployment.yaml
 		cadastro-produtor-deployment.yaml = cadastro-produtor-deployment.yaml
 		rabbitmq-deployment.yaml = rabbitmq-deployment.yaml
 		k8s\deployment\sqlserver-deployment.yaml = k8s\deployment\sqlserver-deployment.yaml
@@ -59,6 +59,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{20243353-AB3C-4EB0-B2D5-7DC075897435}"
 	ProjectSection(SolutionItems) = preProject
+		atualizacao-produtor-service.yaml = atualizacao-produtor-service.yaml
 		k8s\services\cadastro-consumidor-service.yaml = k8s\services\cadastro-consumidor-service.yaml
 		cadastro-produtor-service.yaml = cadastro-produtor-service.yaml
 		rabbitmq-service.yaml = rabbitmq-service.yaml
@@ -66,6 +67,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{20
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configMaps", "configMaps", "{6FE674F2-44E1-40A7-B1A9-A5BC9F97AD14}"
+	ProjectSection(SolutionItems) = preProject
+		rabbitmq-config.yaml = rabbitmq-config.yaml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "volumes", "volumes", "{4BADF0E7-B69F-4235-8F38-6D246B961A25}"
 	ProjectSection(SolutionItems) = preProject
