@@ -19,7 +19,7 @@ spec:
             - containerPort: 80
           env:
             - name: ConnectionStrings__ConnectionString
-              value: "Server=192.168.0.45\\MSSQLSERVER_FIAP;Database=tech_challenge_1;User Id=fiap_user;Password=1234;TrustServerCertificate=True;"
+              value: "Server=sqlserver,1433;Database=tech_challenge_1;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;"
             - name: MassTransit__NomeFila
               value: "filaCadastro"
             - name: MassTransit__Servidor
