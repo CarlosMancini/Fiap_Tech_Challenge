@@ -15,9 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E3DEB49B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap_Tech_Challenge_Fase1.Tests", "Fiap_Tech_Challenge_Fase1.Tests\Fiap_Tech_Challenge_Fase1.Tests.csproj", "{7206F4D0-2446-4E80-BAEC-246EF6504518}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMq", "src\RabbitMq", "{C6C03787-F5F3-4A6E-B16C-779E82F5FC0E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMq", "RabbitMq", "{C6C03787-F5F3-4A6E-B16C-779E82F5FC0E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservicos", "src\Microservicos", "{DEA9A995-0E83-434D-B985-32CB85736EE7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservicos", "Microservicos", "{DEA9A995-0E83-434D-B985-32CB85736EE7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadastro", "src\Microservicos\Cadastro\Cadastro.csproj", "{DDE70713-239B-4E58-907A-3E9E9B698332}"
 EndProject
@@ -25,25 +25,70 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atualizacao", "src\Microser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exclusao", "src\Microservicos\Exclusao\Exclusao.csproj", "{803BDAFA-9DA6-49C2-B905-0B9A1A18BF10}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Produtores", "src\RabbitMq\Produtores", "{E54BC783-D410-4AB2-9F27-4093BDC80CAF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Produtores", "Produtores", "{E54BC783-D410-4AB2-9F27-4093BDC80CAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroProdutor", "src\RabbitMq\Produtores\CadastroProdutor\CadastroProdutor.csproj", "{9054D6AE-CC3C-4997-9292-907AC0541CA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroProdutor", "src\RabbitMq\Produtores\CadastroProdutor\CadastroProdutor.csproj", "{9054D6AE-CC3C-4997-9292-907AC0541CA4}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumidores", "src\RabbitMq\Consumidores", "{73B5100A-55B2-40CD-977D-53F723CC21DE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consumidores", "Consumidores", "{73B5100A-55B2-40CD-977D-53F723CC21DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroConsumidor", "src\RabbitMq\Consumidores\CadastroConsumidor\CadastroConsumidor.csproj", "{9194564C-84FE-402B-A391-BB0E696392D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroConsumidor", "src\RabbitMq\Consumidores\CadastroConsumidor\CadastroConsumidor.csproj", "{9194564C-84FE-402B-A391-BB0E696392D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtualizacaoProdutor", "src\RabbitMq\Produtores\AtualizacaoProdutor\AtualizacaoProdutor.csproj", "{47CF343F-20AC-44E0-B958-65BF5EB6CF68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtualizacaoProdutor", "src\RabbitMq\Produtores\AtualizacaoProdutor\AtualizacaoProdutor.csproj", "{47CF343F-20AC-44E0-B958-65BF5EB6CF68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtualizacaoConsumidor", "src\RabbitMq\Consumidores\AtualizacaoConsumidor\AtualizacaoConsumidor.csproj", "{97B74D52-CECA-4594-81DE-37B977EC0BB9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AtualizacaoConsumidor", "src\RabbitMq\Consumidores\AtualizacaoConsumidor\AtualizacaoConsumidor.csproj", "{97B74D52-CECA-4594-81DE-37B977EC0BB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExclusaoProdutor", "src\RabbitMq\Produtores\ExclusaoProdutor\ExclusaoProdutor.csproj", "{F0F1A9AF-F4EB-456F-9CD0-50E98E269503}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExclusaoProdutor", "src\RabbitMq\Produtores\ExclusaoProdutor\ExclusaoProdutor.csproj", "{F0F1A9AF-F4EB-456F-9CD0-50E98E269503}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExclusaoConsumidor", "src\RabbitMq\Consumidores\ExclusaoConsumidor\ExclusaoConsumidor.csproj", "{62ADFC51-B30D-4DEB-9F98-38D9364675D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExclusaoConsumidor", "src\RabbitMq\Consumidores\ExclusaoConsumidor\ExclusaoConsumidor.csproj", "{62ADFC51-B30D-4DEB-9F98-38D9364675D9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F5C944E-5753-4849-8D55-56C4ED3A3148}"
 	ProjectSection(SolutionItems) = preProject
 		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{FB6C00B3-083B-4C35-8C44-5A6A08B65270}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deployment", "deployment", "{A008F78F-3910-450E-980C-AB754DEE9201}"
+	ProjectSection(SolutionItems) = preProject
+		atualizacao-consumidor-deployment.yaml = atualizacao-consumidor-deployment.yaml
+		atualizacao-produtor-deployment.yaml = atualizacao-produtor-deployment.yaml
+		k8s\deployment\cadastro-consumidor-deployment.yaml = k8s\deployment\cadastro-consumidor-deployment.yaml
+		cadastro-produtor-deployment.yaml = cadastro-produtor-deployment.yaml
+		consulta-contato-deployment.yaml = consulta-contato-deployment.yaml
+		exclusao-consumidor-deployment.yaml = exclusao-consumidor-deployment.yaml
+		exclusao-produtor-deployment.yaml = exclusao-produtor-deployment.yaml
+		grafana-deployment.yaml = grafana-deployment.yaml
+		prometheus-deployment.yaml = prometheus-deployment.yaml
+		rabbitmq-deployment.yaml = rabbitmq-deployment.yaml
+		k8s\deployment\sqlserver-deployment.yaml = k8s\deployment\sqlserver-deployment.yaml
+		rabbitmq-exporter-deployment.yaml = rabbitmq-exporter-deployment.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{20243353-AB3C-4EB0-B2D5-7DC075897435}"
+	ProjectSection(SolutionItems) = preProject
+		atualizacao-consumidor-service.yaml = atualizacao-consumidor-service.yaml
+		atualizacao-produtor-service.yaml = atualizacao-produtor-service.yaml
+		k8s\services\cadastro-consumidor-service.yaml = k8s\services\cadastro-consumidor-service.yaml
+		cadastro-produtor-service.yaml = cadastro-produtor-service.yaml
+		consulta-contato-service.yaml = consulta-contato-service.yaml
+		exclusao-consumidor-service.yaml = exclusao-consumidor-service.yaml
+		exclusao-produtor-service.yaml = exclusao-produtor-service.yaml
+		grafana-service.yaml = grafana-service.yaml
+		prometheus-service.yaml = prometheus-service.yaml
+		rabbitmq-exporter-service.yaml = rabbitmq-exporter-service.yaml
+		rabbitmq-service.yaml = rabbitmq-service.yaml
+		k8s\services\sqlserver-service.yaml = k8s\services\sqlserver-service.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configMaps", "configMaps", "{6FE674F2-44E1-40A7-B1A9-A5BC9F97AD14}"
+	ProjectSection(SolutionItems) = preProject
+		prometheus-config.yaml = prometheus-config.yaml
+		rabbitmq-config.yaml = rabbitmq-config.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "volumes", "volumes", "{4BADF0E7-B69F-4235-8F38-6D246B961A25}"
+	ProjectSection(SolutionItems) = preProject
+		k8s\volumes\sqlserver-pvc.yaml = k8s\volumes\sqlserver-pvc.yaml
 	EndProjectSection
 EndProject
 Global
@@ -126,6 +171,10 @@ Global
 		{97B74D52-CECA-4594-81DE-37B977EC0BB9} = {73B5100A-55B2-40CD-977D-53F723CC21DE}
 		{F0F1A9AF-F4EB-456F-9CD0-50E98E269503} = {E54BC783-D410-4AB2-9F27-4093BDC80CAF}
 		{62ADFC51-B30D-4DEB-9F98-38D9364675D9} = {73B5100A-55B2-40CD-977D-53F723CC21DE}
+		{A008F78F-3910-450E-980C-AB754DEE9201} = {FB6C00B3-083B-4C35-8C44-5A6A08B65270}
+		{20243353-AB3C-4EB0-B2D5-7DC075897435} = {FB6C00B3-083B-4C35-8C44-5A6A08B65270}
+		{6FE674F2-44E1-40A7-B1A9-A5BC9F97AD14} = {FB6C00B3-083B-4C35-8C44-5A6A08B65270}
+		{4BADF0E7-B69F-4235-8F38-6D246B961A25} = {FB6C00B3-083B-4C35-8C44-5A6A08B65270}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D923F7C5-9117-47F4-920C-1A21F2ED0193}

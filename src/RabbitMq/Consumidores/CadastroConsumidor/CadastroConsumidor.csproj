@@ -1,19 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>dotnet-CadastroConsumidor-3ac5a4f2-c878-4d36-ba76-d087db80a03b</UserSecretsId>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-CadastroConsumidor-3ac5a4f2-c878-4d36-ba76-d087db80a03b</UserSecretsId>
-  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="MassTransit.RabbitMQ" Version="8.3.3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Core.csproj" />
-    <ProjectReference Include="..\..\..\Infrastructure\Infrastructure.csproj" />
-    <ProjectReference Include="..\..\..\Microservicos\Cadastro\Cadastro.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Core\Core.csproj" />
+		<ProjectReference Include="..\..\..\Infrastructure\Infrastructure.csproj" />
+		<ProjectReference Include="..\..\..\Microservicos\Cadastro\Cadastro.csproj" />
+	</ItemGroup>
 </Project>

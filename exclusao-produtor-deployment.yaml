@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exclusao-produtor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exclusao-produtor
+  template:
+    metadata:
+      labels:
+        app: exclusao-produtor
+    spec:
+      containers:
+      - name: exclusao-produtor
+        image: mancinicadu/exclusao-produtor:1.0 
+        ports:
+        - containerPort: 8080
+        env:
+        - name: RABBITMQ_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-config
+              key: RABBITMQ_HOST
+        - name: RABBITMQ_USER
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-config
+              key: RABBITMQ_USER
+        - name: RABBITMQ_PASS
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-config
+              key: RABBITMQ_PASS

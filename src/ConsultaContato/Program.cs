@@ -1,5 +1,4 @@
 using ConsultaContato.Extensions;
-using Microsoft.AspNetCore.Builder;
 using Prometheus;
 
 public class Program
@@ -22,28 +21,24 @@ public class Program
 
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
+        app.UseSwagger();
+        app.UseSwaggerUI();
 
-        // Configurar as métricas
         app.UseHttpMetrics();
 
         app.UseAuthorization();
-        // Ordem correta dos middlewares
         app.UseRouting();
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
         {
-            endpoints.MapControllers(); // Mapeia os controllers
-            endpoints.MapMetrics(); // Configura o endpoint /metrics
+            endpoints.MapControllers();
+            endpoints.MapMetrics();
         });
 
         app.UseHttpsRedirection();
+
+        app.Urls.Add("http://*:80");
 
         app.Run();
     }

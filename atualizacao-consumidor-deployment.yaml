@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atualizacao-consumidor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atualizacao-consumidor
+  template:
+    metadata:
+      labels:
+        app: atualizacao-consumidor
+    spec:
+      containers:
+        - name: atualizacao-consumidor
+          image: mancinicadu/atualizacao-consumidor:1.0
+          ports:
+            - containerPort: 80
+          env:
+            - name: ConnectionStrings__ConnectionString
+              value: "Server=sqlserver,1433;Database=tech_challenge_1;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;"
+            - name: MassTransit__NomeFila
+              value: "filaAtualizacao"
+            - name: MassTransit__Servidor
+              value: "rabbitmq"
+            - name: MassTransit__Usuario
+              value: "guest"
+            - name: MassTransit__Senha
+              value: "guest"
+          resources:
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+            requests:
+              cpu: "250m"
+              memory: "256Mi"
