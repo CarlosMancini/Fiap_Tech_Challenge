@@ -22,11 +22,11 @@ namespace ExclusaoProdutor.Controllers
         {
             try
             {
-                var nomeFila = _configuration.GetSection("MassTransit")["NomeFila"] ?? string.Empty;
+                var nomeFila = "filaExclusao";
                 var endpoint = await _bus.GetSendEndpoint(new Uri($"queue:{nomeFila}"));
 
                 await endpoint.Send(input);
-                return Ok();
+                return Ok("Cancelamento solicitado");
             }
             catch (Exception e)
             {

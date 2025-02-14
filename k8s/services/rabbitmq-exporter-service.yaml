@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-exporter
+spec:
+  selector:
+    app: rabbitmq-exporter
+  ports:
+  - protocol: TCP
+    port: 9419
+    targetPort: 9419
+  type: ClusterIP

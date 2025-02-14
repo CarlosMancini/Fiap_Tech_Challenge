@@ -10,9 +10,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var configuration = builder.Configuration;
-var servidor = configuration.GetSection("MassTransit")["Servidor"] ?? string.Empty;
-var usuario = configuration.GetSection("MassTransit")["Usuario"] ?? string.Empty;
-var senha = configuration.GetSection("MassTransit")["Senha"] ?? string.Empty;
+var servidor = Environment.GetEnvironmentVariable("RABBITMQ_HOST") ?? configuration.GetSection("MassTransit")["Servidor"] ?? string.Empty;
+var usuario = Environment.GetEnvironmentVariable("RABBITMQ_USER") ?? configuration.GetSection("MassTransit")["Usuario"] ?? string.Empty;
+var senha = Environment.GetEnvironmentVariable("RABBITMQ_PASS") ?? configuration.GetSection("MassTransit")["Senha"] ?? string.Empty;
 
 builder.Services.AddMassTransit((x =>
 {
@@ -30,17 +30,15 @@ builder.Services.AddMassTransit((x =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.Urls.Add("http://*:80");
 
 app.Run();

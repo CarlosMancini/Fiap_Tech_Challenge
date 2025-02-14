@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atualizacao-produtor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atualizacao-produtor
+  template:
+    metadata:
+      labels:
+        app: atualizacao-produtor
+    spec:
+      containers:
+      - name: atualizacao-produtor
+        image: mancinicadu/atualizacao-produtor:1.0 
+        ports:
+        - containerPort: 8080
+        env:
+        - name: RABBITMQ_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-config
+              key: RABBITMQ_HOST
+        - name: RABBITMQ_USER
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-config
+              key: RABBITMQ_USER
+        - name: RABBITMQ_PASS
+          valueFrom:
+            configMapKeyRef:
+              name: rabbitmq-config
+              key: RABBITMQ_PASS
